@@ -3,3 +3,5 @@
 .buildpath
 .watchr
 .idea
+silex/,project
+laravel4/.project
