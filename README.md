@@ -7,7 +7,7 @@ Projects and Presentation for MeetPHP#8
 Apps
 ===========
 
-Silex & Laravel4 - simple skeleton app with a controller and Doctrine display from memcache 10k records.
+Silex & Laravel4 - simple skeleton app with a controller and Doctrine display from memcache/db 10k records.
 
 
 Installation:
@@ -21,6 +21,16 @@ Laravel:
 
    $cd lavarel4
    $composer install
+
+
+
+Online Apps:
+
+https://meetphp8-silex.orchestra.io/
+https://meetphp8-laravel.orchestra.io/
+
+http://meetphp8silex.eu01.aws.af.cm/
+http://meetphp8laravel.eu01.aws.af.cm/
 
 
 PAAS - Providers:
