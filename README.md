@@ -12,21 +12,24 @@ Silex & Laravel4 - simple skeleton app with a controller and Doctrine display fr
 
 Installation:
 
-Silex:
+1. [http://getcomposer.org/]
+
+2. Depends on App:
+  2.1 Silex:
     
-    $cd silex
-    $composer install
+    $ cd silex
+    $ composer install
 
 
-Laravel:
+  2.2 Laravel:
    
-   $cd lavarel4
-   $composer install
+   $ cd lavarel4
+   $ composer install
 
 
 
-Online Apps:
-
+<big>Online Apps:
+</big>
 https://meetphp8-silex.orchestra.io/
 https://meetphp8-laravel.orchestra.io/
 
