@@ -3,5 +3,6 @@
 .buildpath
 .watchr
 .idea
+.~lock
 silex/,project
 laravel4/.project
