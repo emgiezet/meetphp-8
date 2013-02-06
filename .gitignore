@@ -5,4 +5,6 @@
 .idea
 ~lock.presentation.odp#
 silex/,project
+silex/vendor
 laravel4/.project
+laravel4/vendor
