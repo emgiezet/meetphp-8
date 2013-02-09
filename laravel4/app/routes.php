@@ -13,5 +13,8 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+    $posts = Posts::all();
+     
+   
+	return View::make('hello')->with('posts', $posts);
 });

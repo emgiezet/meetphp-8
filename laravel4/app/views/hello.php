@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset='utf-8'>
-		<title>meetPHP#8 - laravel</title>
+		<title>meetPHP#8 - laravel4</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Aplikacja testowa na meetphp! ">
 		<meta name="author" content="mmx3.pl">
@@ -13,8 +13,6 @@
 		<link href="/public/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="/public/css/bootstrap-responsive.min.css" rel="stylesheet" 	/>
 		<script type="text/javascript">var switchTo5x=true;</script>
-		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-		<script type="text/javascript">stLight.options({publisher: "7965d75c-032f-46d5-a547-95f5aaa97acf"});</script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src="/public/js/bootstrap.min.js"></script>
 	</head>
@@ -24,7 +22,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="span6">
-							<h1>meet.php#8</h1>
+							<h1>meet.php#8 - laravel4</h1>
 							<p class="lead">Hello meetphp!</p>
 						</div>
 					</div>
@@ -34,7 +32,19 @@
 		<section id="content">
 			<div class="container">
 				<div class="row">
-					
+					<div class="span7">
+					    	<table>
+                        		<thead>
+                        			<tr><th>id</th><th>name</th><th>content</th></tr>
+                        		</thead>
+                        		<tbody>
+                        			<?php foreach($posts as $post): ?>
+                        			
+                        			<tr><td><?php echo $post->id; ?></td><td><?php echo $post->name; ?></td><td><?php echo $post->content; ?></td></tr>
+                        			<?php endforeach;?>
+                        		</tbody>
+                        	</table>
+					</div>
 				</div>
 			</div>
 		</section>

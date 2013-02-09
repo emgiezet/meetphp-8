@@ -17,7 +17,11 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('hello');
+	    
+	    $posts = $users = DB::query('select * from posts');
+	    
+	    
+		return View::make('hello')->with('posts', $posts);
 	}
 
 }
