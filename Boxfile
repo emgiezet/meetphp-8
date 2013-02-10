@@ -1,0 +1,4 @@
+web1:
+  document_root: silex/public
+web2:
+  document_root: laravel4/public

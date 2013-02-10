@@ -15,7 +15,6 @@ class HelloWorldController {
 		$statement = $app['dbs']['mysql_read']->prepare($sql);
 		$statement->execute();
 		$posts = $statement->fetchAll();
-		
 		return $app['twig']
 				->render('hello_world/index.html.twig', array('posts' => $posts));
 	}
