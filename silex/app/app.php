@@ -27,6 +27,8 @@ $app
                 new ConfigServiceProvider(
                         __DIR__ . '/Resources/config/config_' . $env . '.yml'),
                 array());
+
+$appname = getenv('APP_NAME');
 $services_json = json_decode(getenv("VCAP_SERVICES"), true);
 if (!empty($services_json)) {
     $mysql_config = $services_json["mysql-5.1"][0]["credentials"];
@@ -35,6 +37,11 @@ if (!empty($services_json)) {
     $hostname = $mysql_config["hostname"];
     $port = $mysql_config["port"];
     $db = $mysql_config["name"];
+} elseif(!empty($appname)) {
+    $hostname = $_SERVER["DB1_HOST"];
+    $db = $_SERVER["DB1_NAME"];
+    $username = $_SERVER["DB1_USER"];
+    $password = $_SERVER["DB1_PASS"];
 } else {
     $username = 'root';
     $password = 'Panties69';
