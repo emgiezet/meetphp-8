@@ -11,6 +11,7 @@ web1:
     - curl
     - http
     - zip
+    - pdo_mysql
   after_build:
     - "if [ ! -f /silex/composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; cd silex; php /var/www/composer.phar install"
   after_deploy:
