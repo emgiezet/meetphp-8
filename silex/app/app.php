@@ -50,7 +50,7 @@ if (!empty($services_json)) { // For Appfog
     $db = $_SERVER["DB1_NAME"];
     $username = $_SERVER["DB1_USER"];
     $password = $_SERVER["DB1_PASS"];
-    
+    $port  = '3306';
     
 
 } else {  //For localhost
@@ -58,6 +58,7 @@ if (!empty($services_json)) { // For Appfog
     $password = 'Panties69';
     $hostname = 'localhost';
     $db = 'meetphp';
+    $port  = '3306';
 }
 
 $app
@@ -67,12 +68,14 @@ $app
                                 'mysql_read' => array(
                                         'driver' => 'pdo_mysql',
                                         'host' => $hostname,
+                                        'port' => $port,
                                         'dbname' => $db,
                                         'user' => $username,
                                         'password' => $password,
                                         'charset' => 'utf8',),
                                 'mysql_write' => array(
                                         'driver' => 'pdo_mysql',
+                                        'port' => $port,
                                         'host' => $hostname,
                                         'dbname' => $db,
                                         'user' => $username,
