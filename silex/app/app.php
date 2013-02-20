@@ -9,7 +9,6 @@ use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\UrlGeneratorServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
 use Igorw\Silex\ConfigServiceProvider;
-use Silex\Provider\MonologServiceProvider;
 $app = new Silex\Application();
 
 $app->register(new SessionServiceProvider());
