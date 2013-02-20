@@ -9,6 +9,7 @@ use Silex\Provider\TwigServiceProvider;
 use Silex\Provider\UrlGeneratorServiceProvider;
 use Silex\Provider\ValidatorServiceProvider;
 use Igorw\Silex\ConfigServiceProvider;
+
 $app = new Silex\Application();
 
 $app->register(new SessionServiceProvider());
@@ -27,7 +28,11 @@ $app
                         __DIR__ . '/Resources/config/config_' . $env . '.yml'),
                 array());
 
-
+$app->register(new MonologServiceProvider(), array(
+        'monolog.logfile' => __DIR__.'/../storage/log/app.log',
+        'monolog.name' => 'app',
+        'monolog.level' => 300 // = Logger::WARNING
+));
 
 
 $appname = getenv('APP_NAME');
@@ -47,12 +52,7 @@ if (!empty($services_json)) { // For Appfog
     $password = $_SERVER["DB1_PASS"];
     
     
-    $app->register(new MonologServiceProvider(), array(
-            'monolog.logfile' => __DIR__.'/../storage/log/app.log',
-            'monolog.name' => 'app',
-            'monolog.level' => 300 // = Logger::WARNING
-    ));
-    
+
 } else {  //For localhost
     $username = 'root';
     $password = 'Panties69';
