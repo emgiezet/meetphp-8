@@ -9,7 +9,7 @@ if (!empty($services_json)) {
     $hostname = $mysql_config["hostname"];
     $port = $mysql_config["port"];
     $db = $mysql_config["name"];
-} elseif(!empty($appname)) {
+} elseif(!empty($appname) && $appname ==='meetphp8') {
     $hostname = $_SERVER["DB1_HOST"];
     $db = $_SERVER["DB1_NAME"];
     $username = $_SERVER["DB1_USER"];

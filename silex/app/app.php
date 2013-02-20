@@ -30,19 +30,19 @@ $app
 
 $appname = getenv('APP_NAME');
 $services_json = json_decode(getenv("VCAP_SERVICES"), true);
-if (!empty($services_json)) {
+if (!empty($services_json)) { // For Appfog
     $mysql_config = $services_json["mysql-5.1"][0]["credentials"];
     $username = $mysql_config["username"];
     $password = $mysql_config["password"];
     $hostname = $mysql_config["hostname"];
     $port = $mysql_config["port"];
     $db = $mysql_config["name"];
-} elseif(!empty($appname)) {
+} elseif(!empty($appname) && $appname ==='meetphp8') {  // For Pagodabox
     $hostname = $_SERVER["DB1_HOST"];
     $db = $_SERVER["DB1_NAME"];
     $username = $_SERVER["DB1_USER"];
     $password = $_SERVER["DB1_PASS"];
-} else {
+} else {  //For localhost
     $username = 'root';
     $password = 'Panties69';
     $hostname = 'localhost';
