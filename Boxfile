@@ -12,7 +12,7 @@ web1:
     - http
     - zip
   after_build:
-    - "if [ ! -f /silex/composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; cd silex;  php composer.phar install"
+    - "if [ ! -f /silex/composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; cd silex; php /var/www/composer.phar install"
   after_deploy:
     - "rm -f /silex/storage/cache/*"
 web2:
