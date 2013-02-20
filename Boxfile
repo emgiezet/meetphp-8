@@ -4,7 +4,7 @@ web1:
   shared_writable_dirs:
     - /silex/storage/cache
     - /silex/storage/sessions
-    - /silex/storage/logs
+    - /silex/storage/log
     - /silex/storage/client
   php_version: 5.3.10
   php_extensions:
