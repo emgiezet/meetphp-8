@@ -2,19 +2,19 @@ web1:
   name: meetphp8silex 
   document_root: silex/public
   shared_writable_dirs:
-    - /storage/cache
-    - /storage/sessions
-    - /storage/logs
-    - /storage/client
+    - /silex/storage/cache
+    - /silex/storage/sessions
+    - /silex/storage/logs
+    - /silex/storage/client
   php_version: 5.3.10
   php_extensions:
     - curl
     - http
     - zip
   after_build:
-    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install"
+    - "if [ ! -f silex/composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php silex/composer.phar install"
   after_deploy:
-    - "rm -f storage/cache/*"
+    - "rm -f /silex/storage/cache/*"
 web2:
   name: meetphp8laravel 
   document_root: laravel4/public

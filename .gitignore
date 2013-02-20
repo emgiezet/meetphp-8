@@ -6,5 +6,6 @@
 ~lock.presentation.odp#
 silex/,project
 silex/vendor
+silex/storage/log/*
 laravel4/.project
 laravel4/vendor
