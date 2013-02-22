@@ -19,3 +19,5 @@ $app->error(function (\Exception $e, $code) use ($app, $env) {
 // Hello World Controller
 $app->get('/', 'App\Controller\HelloWorldController::indexAction')
     ->bind('homepage');
+$app->get('/insert', 'App\Controller\HelloWorldController::insertAction')
+->bind('insert');

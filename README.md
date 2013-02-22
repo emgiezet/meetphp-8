@@ -1,4 +1,4 @@
-meetphp#8 - PHP Startup Prototypes
+meetphp#8 - PHP Startup Prototypes - Searching for best freebie PaaS solution!
 =========
 
 Projects and Presentation for MeetPHP#8
@@ -17,29 +17,28 @@ Main idea
 Apps
 -------
 
-Silex & Laravel4 - simple skeleton app with a controller and Doctrine display from memcache/db 10k records.
+Silex & Laravel4 - simple skeleton app with a controller and ORM select from db 5k records.
 
 
 Installation:
 
 1. [Get Composer plz](http://getcomposer.org/)
 
-2. Depends on App:
-  .1 Silex:
-    ``
+2. Depends on App:   
+    `
     $ cd silex
-    $ composer install
-    ``
-  .2 Laravel:
-   ``
-   $ cd lavarel4
-   $ composer install
-   ``
+    $ php composer.phar install
+    `
+
+    `
+    $ cd lavarel4
+    $ php composer.phar install
+    `
 
 
 Online Apps:
 
-* Orchestra
+* <s>Orchestra</s>
     * [silex](https://meetphp8-silex.orchestra.io/)
     * [laravel4](https://meetphp8-laravel.orchestra.io/)
 * AppFog
@@ -50,22 +49,29 @@ Online Apps:
     * [laravel4](http://meetphp8silex-emgiezet.rhcloud.com/)
 * Heroku
     * TODO
-
-
-
+    * TODO
+* PagodaBox
+    * [silex](http://silex.mmx3.pl)
+    * [laravel4](http://laravel.mmx3.pl)
 
 PAAS - Providers:
 ------
 
 * [OpenShift](http://openshift.redhat.com)
-* [appfog](http://appfog.com)
+* [AppFog](http://appfog.com)
 * [heroku](http://heroku.com)
 * [orchestra](http://orchestra.io)
+* [PagodaBox](http://pagodabox.com)
 
 
-Siege Tests
+Benchmarks
 -----
 
+Methodology
+-------
 * [http://support.rightscale.com/ServerTemplates/Open_Source/Siege_Load_Tester/Siege_Load_Tester_-_Tutorial]
 * [http://www.admin-magazine.com/CloudAge/Blogs/Dan-Frost-s-Blog/Load-Testing-the-Cloud]
+* [http://www.yolinux.com/TUTORIALS/WebServerBenchmarking.html]
 
+Results
+----
